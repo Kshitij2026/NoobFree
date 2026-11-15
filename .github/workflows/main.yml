@@ -19,9 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Setup Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -41,4 +38,3 @@ jobs:
         with:
           name: NoobFree-debug.apk
           path: NoobFree-debug.apk
-          
