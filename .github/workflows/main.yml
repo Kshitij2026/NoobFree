@@ -8,6 +8,9 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: NoobFree
 
     steps:
       - name: Checkout NoobFree source
@@ -37,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: NoobFree-debug.apk
-          path: NoobFree-debug.apk
+          path: NoobFree/NoobFree-debug.apk
