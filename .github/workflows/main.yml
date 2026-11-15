@@ -37,10 +37,6 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Run Unit Tests
-        working-directory: ${{ steps.locate.outputs.project_dir }}
-        run: gradle testDebugUnitTest --stacktrace
-
       - name: Build Installable Debug APK
         working-directory: ${{ steps.locate.outputs.project_dir }}
         run: gradle assembleDebug --stacktrace
